@@ -1,0 +1,41 @@
+1. Root Seçimi:
+   - İlk eleman root olarak seçilir: `7`
+
+2. İkinci elemanın yerleştirilmesi:
+   - `5` (7'den küçük olduğu için 7'nin soluna)
+
+3. Üçüncü elemanın yerleştirilmesi:
+   - `1` (7'den küçük, 5'ten de küçük, bu nedenle 5'in soluna)
+
+4. Dördüncü elemanın yerleştirilmesi:
+   - `8` (7'den büyük olduğu için 7'nin sağına)
+
+5. Beşinci elemanın yerleştirilmesi:
+   - `3` (7'den ve 5'ten küçük, 1'den büyük, bu nedenle 1'in sağına)
+
+6. Altıncı elemanın yerleştirilmesi:
+   - `6` (7'den küçük, 5'ten büyük, bu nedenle 5'in sağına)
+
+7. Yedinci elemanın yerleştirilmesi:
+   - `0` (7'den, 5'ten ve 1'den küçük, bu nedenle 1'in soluna)
+
+8. Sekizinci elemanın yerleştirilmesi:
+   - `9` (7'den ve 8'den büyük, bu nedenle 8'in sağına)
+
+9. Dokuzuncu elemanın yerleştirilmesi:
+   - `4` (7'den ve 5'ten küçük, 1'den büyük; 3'ten de büyük olduğu için 3'ün sağına)
+
+10. Onuncu elemanın yerleştirilmesi:
+    - `2` (7'den, 5'ten küçük, 1'den büyük; 3'ten küçük olduğu için 3'ün soluna)
+
+Sonuç
+
+       7
+      / \
+     5   8
+    / \   \
+   1   6   9
+  / \
+ 0   3
+    / \
+   2   4
