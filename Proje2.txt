@@ -1,0 +1,28 @@
+1. Adım
+
+
+[2, 3, 5, 8, 7, 9, 4, 15, 6] 
+
+
+2. Adım
+
+[2, 3, 5, 8, 7, 9, 4, 15, 6] 
+
+3. Adım
+
+[2, 3, 4, 8, 7, 9, 5, 15, 6]
+
+4. Adım
+
+[2, 3, 4, 5, 7, 9, 8, 15, 6]
+
+Big-O Gösterimi
+Selection Sort'un zaman karmaşıklığı her durumda `O(n^2)` şeklindedir. Bu, dizi büyüklüğüne göre zamanın karesel olarak artacağı anlamına gelir.
+
+Time Complexity
+18 sayısı verilen dizide bulunmamaktadır; ancak genel olarak bir dizide bir sayıyı aramanın zaman karmaşıklığını ele alırsak:
+- Average Case: Aradığımız sayının dizinin ortasında olması.
+- Worst Case: Aradığımız sayının dizinin sonunda olması.
+- Best Case: Aradığımız sayının dizinin başında olması.
+
+Eğer dizi sıralandıktan sonra `18` sayısını dizi içinde ararsak, dizide olmadığını gördüğümüzde dizinin tüm elemanlarını kontrol edene kadar (en kötü ihtimalle) bakmamız gerekecektir, bu yüzden **Worst Case** kategorisine girer.
