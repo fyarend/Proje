@@ -1,28 +1,47 @@
-1. Adım
+Merge Sort Aşamaları
+
+Merge Sort, bir diziyi sürekli olarak iki eşit parçaya böler ve sonra birleştirirken sıralar. İşte `[16,21,11,8,12,22]` dizisinin Merge Sort kullanılarak sıralanması için yapılan ana aşamalar:
+
+Başlangıç Dizisi
+
+[16, 21, 11, 8, 12, 22]
 
 
-[2, 3, 5, 8, 7, 9, 4, 15, 6] 
 
+Adım 1: Diziyi İkiye Böl
+- Sol taraf: `[16, 21, 11]`
+- Sağ taraf: `[8, 12, 22]`
 
-2. Adım
+Adım 2: Her iki tarafı kendi içinde ikiye böl
+- Sol taraf için:
+  - Sol: `[16]`
+  - Sağ: `[21, 11]`
 
-[2, 3, 5, 8, 7, 9, 4, 15, 6] 
+  Sol tarafın sağ kısmını tekrar böl:
+  - Sol: `[21]`
+  - Sağ: `[11]`
 
-3. Adım
+- Sağ taraf için:
+  - Sol: `[8]`
+  - Sağ: `[12, 22]`
 
-[2, 3, 4, 8, 7, 9, 5, 15, 6]
+  Sağ tarafın sağ kısmını tekrar böl:
+  - Sol: `[12]`
+  - Sağ: `[22]`
 
-4. Adım
+Adım 3: Parçaları Merge Ederek Birleştir
+- `[21]` ve `[11]` birleştir: `[11, 21]`
+- `[16]` ile `[11, 21]` birleştir: `[11, 16, 21]`
+- `[12]` ve `[22]` birleştir: `[12, 22]`
+- `[8]` ile `[12, 22]` birleştir: `[8, 12, 22]`
+- `[11, 16, 21]` ve `[8, 12, 22]` final birleştirme: `[8, 11, 12, 16, 21, 22]`
 
-[2, 3, 4, 5, 7, 9, 8, 15, 6]
+Final Sıralı Dizi:
+
+[8, 11, 12, 16, 21, 22]
 
 Big-O Gösterimi
-Selection Sort'un zaman karmaşıklığı her durumda `O(n^2)` şeklindedir. Bu, dizi büyüklüğüne göre zamanın karesel olarak artacağı anlamına gelir.
 
-Time Complexity
-18 sayısı verilen dizide bulunmamaktadır; ancak genel olarak bir dizide bir sayıyı aramanın zaman karmaşıklığını ele alırsak:
-- Average Case: Aradığımız sayının dizinin ortasında olması.
-- Worst Case: Aradığımız sayının dizinin sonunda olması.
-- Best Case: Aradığımız sayının dizinin başında olması.
+Merge Sort'un zaman karmaşıklığı, her defasında diziyi iki eşit parçaya böldüğü ve her düzeyde `n` elemanı kapsayan işlemleri gerçekleştirdiği için `O(n log n)`'dir. Bu gösterim, dizinin boyutunun büyüklüğüne (`n`) ve dikotomik (ikili) bölünmenin derinliğine (`log n`) dayanır.
 
-Eğer dizi sıralandıktan sonra `18` sayısını dizi içinde ararsak, dizide olmadığını gördüğümüzde dizinin tüm elemanlarını kontrol edene kadar (en kötü ihtimalle) bakmamız gerekecektir, bu yüzden **Worst Case** kategorisine girer.
+Bu performans, en iyi, ortalama ve en kötü durumlarda sabittir, çünkü Merge Sort her durumda diziyi tamamen böler ve birleştirir.
